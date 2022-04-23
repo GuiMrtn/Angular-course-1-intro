@@ -1,32 +1,13 @@
+//Ici on importe les éléments dont va avoir besoin notre fichier. Ici, on importe l'élément Component qui provient de la librairie @angular/core
 import { Component } from '@angular/core';
 
+//Ici on utilise notre component sous la forme d'un décorateur avec l'@. Il va nous permettre de construire un composant web avec Angular. Ici on a un selector qui va nous permettre de donner un nom à composant, hisoire de l'identifier par la suite. Ici, notre composant s'appelle app-root. Ainsi, dans la page web, c'est la balise app-root qui sera insérée. Ensuite, on a le template qui va définir le code html qui est associé à ce composant web
 @Component({
   selector: 'app-root',
-  template: `
-    <!--The content below is only a placeholder and can be replaced.-->
-    <div style="text-align:center" class="content">
-      <h1>
-        Welcome to {{title}}!
-      </h1>
-      <span style="display: block">{{ title }} app is running!</span>
-      <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-    </div>
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-    </ul>
-    <router-outlet></router-outlet>
-  `,
-  styles: []
+  template: `<h1>Welcome to {{title}}!</h1>`
+      
 })
 export class AppComponent {
+  //Ici on décrit une propriété pour notre composant (qui s'appelle AppComponent) et qui va s'appeler title. On va lui attribuer la valeur ng-angular-app et Angular va être capable de pousser cette valeur dans le template (ce que nous avons juste au-dessus). Il y a enfin le export qui va nous permettre d'exporter notre composant pour le rendre disponible ailleurs dans l'application. Par exemple, dans app.module.ts, à la ligne 5, on importe notre composant AppComponent.
   title = 'ng-angular-app';
 }
